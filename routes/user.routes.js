@@ -1,9 +1,12 @@
 import { Router } from "express";
+import { getUser, getUsers } from "../controllers/user.controller.js";
+
+import { authorize } from "../middleware/auth.middleware.js";
 
 const userRouter = Router();
 
-userRouter.get("/", (req, res) => res.send({ title: "GEt all users" }));
-userRouter.get("/:id", (req, res) => res.send({ title: "Get user derails" }));
+userRouter.get("/", getUsers);
+userRouter.get("/:id", authorize, getUser);
 
 userRouter.post("/", (req, res) => res.send({ title: "POST new user" }));
 userRouter.put("/:id", (req, res) => res.send({ title: "UPDATE User" }));
