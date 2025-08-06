@@ -26,13 +26,12 @@ A production-ready backend API for managing user subscriptions. Includes authent
 
 ```
 
-subdub-backend/
+subscription tracker -backend/
 ├── config/             # Environment configuration
 ├── controllers/        # Route handlers
-├── models/             # Mongoose/ORM models
+├── model/             # Mongoose/ORM models
 ├── routes/             # API endpoints
 ├── middleware/         # Auth and validation middleware
-├── services/           # Business logic (e.g. payments, notifications)
 ├── utils/              # Helper functions
 ├── tests/              # Unit/integration tests
 ├── .env.example
@@ -47,7 +46,7 @@ subdub-backend/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/subdub-backend.git
+   git clone https://github.com/oyetunji26/subscription-tracker.git
    cd subdub-backend
 ````
 
@@ -86,8 +85,7 @@ PORT=5500
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@example.com
-EMAIL_PASS=your_email_password
-FRONTEND_URL=http://localhost:3000
+EMAIL_PASSWORD =your_email_password
 ```
 
 ---
@@ -140,7 +138,6 @@ FRONTEND_URL=http://localhost:3000
 * JWT for authentication
 * Nodemailer or third-party email service
 * Dotenv for config
-* Optional: Stripe / Paystack integration
 
 ---
 
