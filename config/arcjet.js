@@ -5,9 +5,9 @@ const aj = arcjet({
   key: ARCJET_KEY,
   characteristics: ["ip.src"],
   rules: [
-    shield({ mode: "DRY_RUN" }),
+    shield({ mode: "LIVE" }),
     detectBot({
-      mode: "DRY_RUN",
+      mode: "LIVE",
       allow: ["CATEGORY:SEARCH_ENGINE"],
     }),
     tokenBucket({
